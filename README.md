@@ -4,7 +4,7 @@ foursquare API) on a map together with user location.
 
 ## Demo
 
-[![Demo Doccou alpha](https://github.com/mihailsalari/Foursquare-Restaurants-Swift/blob/master/screen2.png)](https://www.youtube.com/watch?v=R4KXuroc3g4)
+[![Demo Doccou alpha](https://github.com/mihailsalari/Foursquare-Restaurants-Swift/blob/master/Screen2.png)](https://www.youtube.com/watch?v=R4KXuroc3g4)
 
 ## Support
 
