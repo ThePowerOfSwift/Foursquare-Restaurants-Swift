@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C86016DA1CBB1E7B000BA1D3"
-               BuildableName = "4square.app"
+               BuildableName = "Foursquare.app"
                BlueprintName = "4square"
                ReferencedContainer = "container:4square.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C86016DA1CBB1E7B000BA1D3"
-            BuildableName = "4square.app"
+            BuildableName = "Foursquare.app"
             BlueprintName = "4square"
             ReferencedContainer = "container:4square.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C86016DA1CBB1E7B000BA1D3"
-            BuildableName = "4square.app"
+            BuildableName = "Foursquare.app"
             BlueprintName = "4square"
             ReferencedContainer = "container:4square.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C86016DA1CBB1E7B000BA1D3"
-            BuildableName = "4square.app"
+            BuildableName = "Foursquare.app"
             BlueprintName = "4square"
             ReferencedContainer = "container:4square.xcodeproj">
          </BuildableReference>
