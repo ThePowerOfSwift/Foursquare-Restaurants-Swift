@@ -15,7 +15,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     @IBOutlet weak var mapView: MKMapView!
     
     let locationManager = CLLocationManager()
-    let regionRadius: CLLocationDistance = 1000
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +22,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         // Do any additional setup after loading the view.
         self.mapView.delegate = self
         self.locationManager.delegate = self
-        
         retrieveFoursquare()
-        setMapLocation()
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,9 +39,29 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func locationAuthStatus() {
         if CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse {
             self.mapView.showsUserLocation = true
+            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            self.locationManager.startUpdatingLocation()
         } else {
             self.locationManager.requestWhenInUseAuthorization()
         }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let userLocation: CLLocation = locations[0] {
+            let latitude = userLocation.coordinate.latitude
+            let longitude = userLocation.coordinate.longitude
+            let latDelta: CLLocationDegrees = 0.05
+            let lonDelta: CLLocationDegrees = 0.05
+            let span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
+            let centerLocation = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            let region = MKCoordinateRegion(center: centerLocation, span: span)
+            self.mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Errors: " + error.localizedDescription)
     }
     
     // MARK -FoursquareService
@@ -75,26 +92,4 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
         }
     }
-    
-    
-    // MARK: Set Location
-    func setMapLocation() {
-        let latitude: CLLocationDegrees = 47.0227356
-        let longitude: CLLocationDegrees = 28.8329315
-        
-        let latDelta: CLLocationDegrees = 0.01
-        let lonDelta: CLLocationDegrees = 0.01
-        
-        let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let span: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, lonDelta)
-        let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
-        mapView.setRegion(region, animated: true)
-    }
-    
-    @IBAction func setMyLocation(sender: UIBarButtonItem) {
-        setMapLocation()
-    }
-    
-
-
 }

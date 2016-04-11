@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A97C556716DC8725ED62A43B /* Pods_4square.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0E7DCEF44274EE6123719F7 /* Pods_4square.framework */; };
+		C850C02C1CBBED5600E7B379 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C850C02B1CBBED5600E7B379 /* CoreLocation.framework */; };
+		C850C02E1CBBED5D00E7B379 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C850C02D1CBBED5D00E7B379 /* MapKit.framework */; };
 		C86016DF1CBB1E7B000BA1D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86016DE1CBB1E7B000BA1D3 /* AppDelegate.swift */; };
-		C86016E11CBB1E7B000BA1D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86016E01CBB1E7B000BA1D3 /* ViewController.swift */; };
 		C86016E41CBB1E7B000BA1D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86016E21CBB1E7B000BA1D3 /* Main.storyboard */; };
 		C86016E61CBB1E7B000BA1D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C86016E51CBB1E7B000BA1D3 /* Assets.xcassets */; };
 		C86016E91CBB1E7B000BA1D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86016E71CBB1E7B000BA1D3 /* LaunchScreen.storyboard */; };
@@ -44,9 +45,10 @@
 		30D8E4930FA9A762B89544BD /* Pods-4square.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4square.release.xcconfig"; path = "Pods/Target Support Files/Pods-4square/Pods-4square.release.xcconfig"; sourceTree = "<group>"; };
 		30F24E11126E4F134FE088A5 /* Pods-4square.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-4square.debug.xcconfig"; path = "Pods/Target Support Files/Pods-4square/Pods-4square.debug.xcconfig"; sourceTree = "<group>"; };
 		C0E7DCEF44274EE6123719F7 /* Pods_4square.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_4square.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C850C02B1CBBED5600E7B379 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C850C02D1CBBED5D00E7B379 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C86016DB1CBB1E7B000BA1D3 /* Foursquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foursquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86016DE1CBB1E7B000BA1D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C86016E01CBB1E7B000BA1D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C86016E31CBB1E7B000BA1D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C86016E51CBB1E7B000BA1D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C86016E81CBB1E7B000BA1D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C850C02E1CBBED5D00E7B379 /* MapKit.framework in Frameworks */,
+				C850C02C1CBBED5600E7B379 /* CoreLocation.framework in Frameworks */,
 				A97C556716DC8725ED62A43B /* Pods_4square.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +107,8 @@
 		9D05D76D02F149CCF7F52091 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C850C02D1CBBED5D00E7B379 /* MapKit.framework */,
+				C850C02B1CBBED5600E7B379 /* CoreLocation.framework */,
 				C0E7DCEF44274EE6123719F7 /* Pods_4square.framework */,
 			);
 			name = Frameworks;
@@ -133,8 +139,8 @@
 		C86016DD1CBB1E7B000BA1D3 /* 4square */ = {
 			isa = PBXGroup;
 			children = (
-				C89B98FF1CBB1FEA006279A4 /* ViewController */,
 				C89B98F81CBB1FA3006279A4 /* Model */,
+				C89B98FF1CBB1FEA006279A4 /* ViewController */,
 				C89B98F11CBB1F44006279A4 /* Network */,
 				C86016DE1CBB1E7B000BA1D3 /* AppDelegate.swift */,
 				C86016E21CBB1E7B000BA1D3 /* Main.storyboard */,
@@ -185,7 +191,6 @@
 		C89B98FF1CBB1FEA006279A4 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C86016E01CBB1E7B000BA1D3 /* ViewController.swift */,
 				C89B99001CBB2019006279A4 /* MapViewController.swift */,
 			);
 			name = ViewController;
@@ -378,7 +383,6 @@
 			files = (
 				C89B98FE1CBB1FD3006279A4 /* Response.swift in Sources */,
 				C89B98F51CBB1F7A006279A4 /* NetworkOperation.swift in Sources */,
-				C86016E11CBB1E7B000BA1D3 /* ViewController.swift in Sources */,
 				C89B98FA1CBB1FB5006279A4 /* Restaurant.swift in Sources */,
 				C89B98F71CBB1F8B006279A4 /* FoursquareService.swift in Sources */,
 				C86016DF1CBB1E7B000BA1D3 /* AppDelegate.swift in Sources */,

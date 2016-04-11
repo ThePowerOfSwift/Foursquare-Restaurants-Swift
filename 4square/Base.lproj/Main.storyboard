@@ -8,7 +8,7 @@
         <!--Restaurants-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="_square" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Foursquare" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,14 +29,7 @@
                             <constraint firstItem="NTN-zM-ZZr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="mTV-lT-f9B"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Restaurants" id="lwI-xy-Hdu">
-                        <barButtonItem key="rightBarButtonItem" image="gps" id="jMi-Pv-FLr">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="setMyLocation:" destination="BYZ-38-t0r" id="2Wp-Gd-iEc"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Restaurants" id="lwI-xy-Hdu"/>
                     <connections>
                         <outlet property="mapView" destination="NTN-zM-ZZr" id="foh-mD-tmf"/>
                     </connections>
@@ -65,7 +58,4 @@
             <point key="canvasLocation" x="380" y="1089"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="gps" width="22" height="22"/>
-    </resources>
 </document>
